@@ -1,0 +1,188 @@
+
+/* slider */
+#slider{
+
+	max-width:696px;
+	max-height:594px;
+	margin:auto;
+	margin-bottom:10px;
+	box-shadow:5px 5px rgb(220,220,220);	
+	overflow:hidden;
+}
+#slider img
+{
+	width:100%;
+
+}
+button.controls:hover
+{
+	color:rgb(41,129,202);;
+}
+#bouttonNavSlider{
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+	display:flex;
+	width:120px;
+	z-index: 2;
+}
+#bouttonCloseSlider
+{
+	position:absolute;
+	top:0;
+	right:0;
+	z-index: 2;
+}
+.controls{
+	height:30px;
+	border-radius:50%;
+	margin:0;
+	background-color:transparent;
+	border-style:none;
+	color:black;
+}
+#slides{
+	position: relative;
+	margin:center;
+	width:696px;
+	height:594px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.slide{
+	position: absolute;
+	top: 0;	
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
+}
+.showing{
+	opacity: 1;
+	z-index: 2;
+}
+#pause{
+	margin:0 auto;
+}
+
+/* corps */
+#location{
+	display:flex;
+	margin:auto;
+
+}
+#carte{
+	width:100%;
+}
+#map{
+	height:90vh;
+	margin-bottom:0;
+}
+form
+{	
+	width:auto;
+	display:none;
+	padding:2px;
+	margin-left:5px;
+	text-align:center;
+}
+fieldset{
+	min-width:200px;
+	border-radius:10px;
+	background-color:rgb(220,220,220);
+	box-shadow: 5px 5px rgb(220,220,220);
+	margin-bottom:10px;
+	margin-top:0px;
+
+}
+.buttonInput{
+	border-style:solid 1px white;
+	background-color:rgb(41,129,202);
+	color:rgb(220,220,220);
+	height:30px;
+	border-radius:10px;
+}
+.buttonInput:hover{
+	border-style:solid 1px transparent;
+	border-color:rgb(41,129,202);
+	background-color:transparent;
+	color:rgb(41,129,202);
+}
+#signature
+{
+	display:none;
+	-webkit-display:none;
+	margin:auto;
+}
+canvas{
+	border:solid 1px black;
+	background-color:white;
+}
+h6
+{
+	font-size:20px;
+	padding:2px;
+	margin:0;
+	text-decoration:underline;
+}
+#confirmationReservation{
+	width:auto;
+	background-color:rgb(220,220,220);
+	border-radius:10px;
+	max-width:500px;
+	margin:auto;
+	box-shadow:5px 5px rgb(220,220,220);
+	padding:5px;
+	margin-top:5px;
+	text-align:center;
+}
+#confirmationReservation p{
+	padding:0;
+	margin:0;
+}
+
+@media all and (max-width:768px){
+	#location{
+		flex-direction:column;
+	}
+	#carte{
+		width:100%;
+		margin:auto;
+	}
+	form
+	{
+		width:100%;
+		margin-left:0;
+	}
+	#slides{
+	width:464px;
+	height:362px;
+	}
+	#slider{
+		width:464px;
+		height:362px;
+	}
+}
+
+@media all and (max-width:472px), all and (orientation: landscape) and (max-width:768px){
+	
+	#slides{
+	width:232px;
+	height:181px;
+	}
+	#slider{
+		width:232px;
+		height:181px;
+	}
+}
